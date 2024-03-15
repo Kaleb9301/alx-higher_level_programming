@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""add two number """
 from add_0 import add
 
-result = add(1, 2)
-print("{} + {} = {}".format(1,2,result))
+a = 1
+b = 2
+
+print("{0} + {1} = {2}".format(a, b, add(a, b)))
