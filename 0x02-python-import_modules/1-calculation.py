@@ -6,4 +6,4 @@ if __name__ == "__main__":
     print("{:n} + {:n} = {:n}".format(a, b, add(a, b)))
     print("{:n} - {:n} = {:n}".format(a, b, sub(a, b)))
     print("{:n} * {:n} = {:n}".format(a, b, mul(a, b)))
-    print("{:n} / {:n} = {:n}"/format(a, b, div(a, b)))
+    print("{:n} / {:n} = {:n}".format(a, b, div(a, b)))
