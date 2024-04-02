@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"Define a calss square with variable (filed in it"
 
 
 class Square:
