@@ -34,36 +34,38 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """This method sets the postion of suqre
-
-            Args:
-                postion: this upele defis the postion fo the square.
-                    The psiton is valdiated with try/except
-
+        """set the position of this square
+            Args: value as 0 tuple of tow postive integers
+            Raises:
+                TypeError: if value is not a tuple or any int int in tuple < 0
         """
-        try:
-            self.__position = value
-            if type(value) is not tuple:
-                raise TypeError
-            if len(value) != 2:
-                raise TypeError
-            if value[0] < 0 or value[1] < 0:
-                raise TypeError
-        except TypeError:
-            raise TypeError("position must be tuple of 2 postive integers")
+        if not isinstance(value, tuple):
+            raise TypeError('postion must be a tuple of 2 positive integers')
+        if len(value) != 2:
+            raise TypeError('postion must be a tuple of 2 positive integers')
+        if len([i for i in value if isinstance(i, int) and i >=0]) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = value
 
     def area(self):
         """Return the current area of the square."""
         return (self.__size ** 2)
 
+    def pos_print(self):
+        """returns the position in spaces"""
+        pos = ""
+        if self.size == 0:
+            return "\n"
+        for w in range(self.position[1]):
+            pos += "\n"
+        for w in range(self.size):
+            for i in range(self.position[0]):
+                pos += " "
+            for j in range(self.size):
+                pos += "#"
+            pos += "\n"
+        return pos
+    
     def my_print(self):
-        """Print the square with the # character."""
-        if self.__size == 0:
-            print("")
-            return
-
-        [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
-            [print("#", end="") for k in range(0, self.__size)]
-            print("")
+        """print the square in position"""
+        print(self.pos_print(), end='')
