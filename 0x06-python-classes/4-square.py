@@ -12,15 +12,6 @@ class Square:
         """
         self.__size = size
 
-    def area(self):
-        """Area of square
-            Args:
-            self
-            Returns:
-                int: The return value. the square of the size
-        return self.__size ** 2
-        """
-
     @property
     def size(self):
         """size getter
@@ -29,7 +20,7 @@ class Square:
             return:
                 size of the side(int)
         """
-        return self__size
+        return (self.__size)
 
     @size.setter
     def size(self, value):
@@ -40,5 +31,9 @@ class Square:
         """
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
-        elif value
-        self.__size = value
+        elif value:
+            self.__size = value
+
+    def area(self):
+        """Return the current area of the square. """
+        return (self.__size ** 2)
