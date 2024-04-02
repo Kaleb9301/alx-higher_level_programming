@@ -21,7 +21,7 @@ class Node:
         """sets data attribute"""
 
         if not isinstance(value, int):
-            raise TypeError('data must be aninteger')
+            raise TypeError('data must be an integer')
         self.__data = value
 
     @property
