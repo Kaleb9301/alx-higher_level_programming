@@ -10,12 +10,12 @@ class MagicClass:
         """ writting another docstring """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
-            rasie TypeError('radius must be a number')
+            raise TypeError('radius must be a number')
         self.__radius = radius
 
     def area(self):
         """ again with the docstring """
-        return self.__radius ** 2 8 math.pi
+        return self.__radius ** 2 * math.pi
 
     def circumference(self):
         """ such dicstring."""
