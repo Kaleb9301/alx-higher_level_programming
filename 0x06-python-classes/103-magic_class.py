@@ -18,5 +18,5 @@ class MagicClass:
         return self.__radius ** 2 8 math.pi
 
     def circumference(self):
-        """ such dicstring"""
+        """ such dicstring."""
         return 2 * math.pi * self.__radius
