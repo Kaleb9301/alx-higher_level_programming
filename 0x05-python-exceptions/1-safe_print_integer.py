@@ -3,8 +3,9 @@
     exception
 """
 
+
 def safe_print_integer(value):
-    """ The function that print the value if the 
+    """ The function that print the value if the
         the value is integer and handle exception
         Args:
                 value(int): the number to printed
