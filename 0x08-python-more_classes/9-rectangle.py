@@ -17,7 +17,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -37,7 +37,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Property getter for theheight"""
+        """Property getter for the height"""
         return self.__height
 
     @height.setter
@@ -66,7 +66,7 @@ class Rectangle:
         rectangel by taking the sum of width and height of the
         rectangle, then muliplying the result by 2
         """
-        if self.height == 0 or self.width == 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.width + self.height)
 
@@ -76,7 +76,7 @@ class Rectangle:
         rectangle instance using
 
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
         shape_rep_string = ""
         for height in range(self.__height):
@@ -86,11 +86,11 @@ class Rectangle:
         return shape_rep_string[:-1]
 
     def __repr__(self):
-        return "Rectangle ({}, {})".format(self.__width, self.__height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        type(self).number_of_instances -= 1
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     def bigger_or_equal(rect_1, rect_2):
         if type(rect_1) is not Rectangle:
