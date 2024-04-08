@@ -86,13 +86,16 @@ class Rectangle:
         return shape_rep_string[:-1]
 
     def __repr__(self):
+        """return the width and height"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
+        """delete an instance of a class"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     def bigger_or_equal(rect_1, rect_2):
+        """Method for cheking which one of the recangles are big"""
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
@@ -103,7 +106,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Create a new Rectangle instw with widdth == height == size
+        """Create a new Rectangle instance with width == height == size
         """
         return cls(size, size)
 
