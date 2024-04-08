@@ -84,7 +84,7 @@ class Rectangle:
         return "Rectangle({}, {}".fomate(self.width, self.height)
 
     def __del__(self):
-        print("Bye reectangle...")
+        print("Bye rectangle...")
 
 
 if __name__ == "__main__":
