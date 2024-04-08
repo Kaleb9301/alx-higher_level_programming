@@ -32,12 +32,12 @@ class Rectangle:
         elif width < 0:
             raise ValueError("with must be >= 0")
         self.__width = width
-    
+
     @property
     def height(self):
         """Property getter for the height"""
         return self.__heigh
-        
+
     @height.setter
     def height(self, height):
         """
@@ -48,6 +48,7 @@ class Rectangle:
         elif height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
+
 
 if __name__ == "__main__":
     import doctest
