@@ -8,7 +8,7 @@ height and widht of the rectangle. to calculat area
 
 class Rectangle:
     """This is an class Rectangle with instance attribute height and width"""
-    def __init__(self, width, height):
+    def __init__(self, width = 0, height = 0):
         """
         initializes height and widt of the rectangle
         upon creation of an instance using property
