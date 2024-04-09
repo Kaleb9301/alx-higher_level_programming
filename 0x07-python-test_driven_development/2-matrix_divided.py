@@ -9,7 +9,7 @@ def matrix_divided(matrix, div):
     """Divides all elements in the matrix by div"""
     if type(matrix) is not list:
         raise TypeError(
-            "matrix must be an matrix (list of lists) of integers/floats")
+            "matrix must be a matrix (list of lists) of integers/floats")
     size = None
     for list_kind in matrix:
         if type(list_kind) is not list:
@@ -26,5 +26,5 @@ integers/floats")
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
-        raise ZeroDivisionError("division by Zero")
+        raise ZeroDivisionError("division by zero")
     return [[round(i / div, 2) for i in list_kind] for list_kind in matrix]
