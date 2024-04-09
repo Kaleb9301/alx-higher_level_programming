@@ -30,7 +30,7 @@ class Rectangle:
         property setter for the width
         """
         if type(width) is not int:
-            raise TypeErro("width must be an integer")
+            raise TypeError("width must be an integer")
         elif width < 0:
             raise ValueError("width must be >= 0")
         self.__width = width
