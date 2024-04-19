@@ -1,4 +1,4 @@
-#!/ur/bin/python3
+#!/usr/bin/python3
 
 """this module return the element of the list at some index"""
 
