@@ -9,4 +9,6 @@ def multiple_returns(sentence):
         Return: the tuple of int and string from the
                 length of the sentence and the first character
     """
+    if sentence == "":
+        return(len(sentence), None)
     return (len(sentence), sentence[0])
