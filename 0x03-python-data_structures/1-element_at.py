@@ -9,4 +9,9 @@ def element_at(my_list, indx):
              indx: the position that element found
         Return: the element at the index
     """
-    return my_list[indx]
+    if indx < 0:
+        return None
+    elif indx >= len(my_list):
+        return None
+    else:
+        return my_list[indx]
