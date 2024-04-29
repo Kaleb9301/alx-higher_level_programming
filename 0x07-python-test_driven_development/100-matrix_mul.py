@@ -29,7 +29,7 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_b can't be empty")
 
     for i in range(len(m_a)):
-        if not isinstance(m_a[i], list) or m_a[i] == [] :
+        if not isinstance(m_a[i], list):
             raise ValueError("m_a must be list of lists")
 
     if not all((isinstance(ele, int) or isinstance(ele, float))
