@@ -22,18 +22,17 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_a must be a list")
     if not isinstance(m_b, list):
         raise TypeError("m_b must be a list")
+    for i in range(len(m_a)):
+        if not isinstance(m_a[i], list):
+            raise TypeError("m_a must be a list of lists")
+    for i in range(len(m_b)):
+        if not isinstance(m_b[i], list):
+            raise TypeError("m_b must be a list of lists")
 
     if m_a == [] or m_a == [[], []] or m_a == [[]]:
         raise ValueError("m_a can't be empty")
     if m_b == [] or m_b == [[]] or m_b == [[], []]:
         raise ValueError("m_b can't be empty")
-
-    for i in range(len(m_a)):
-        if not isinstance(m_a[i], list):
-            raise ValueError("m_a must be list of lists")
-    for i in range(len(m_b)):
-        if not isinstance(m_b[i], list):
-            raise ValueError("m_b must be list of lists")
 
     if not all((isinstance(ele, int) or isinstance(ele, float))
                for ele in [num for row in m_a for num in row]):
