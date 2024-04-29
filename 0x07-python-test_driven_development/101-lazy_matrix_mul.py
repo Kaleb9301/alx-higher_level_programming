@@ -17,4 +17,12 @@ def lazy_matrix_mul(m_a, m_b):
 
 
     """
+    for elems in m_a:
+        if not isinstance(elems, list):
+            raise TypeError("m_a must be a list of lists")
+
+    for elems in m_b:
+        if not isinstance(elems, list):
+            raise TypeError("m_b must be a list of lists")
+
     return (np.matmul(m_a, m_b))
