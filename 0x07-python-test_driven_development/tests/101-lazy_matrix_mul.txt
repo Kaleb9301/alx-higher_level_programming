@@ -173,3 +173,15 @@ For passing m_b with empyt rows:
     >>> print(matrix_mul([[1, 2], [3, 4]], [[], []]))
     []
 
+For non-number in list in m_a
+    >>> matrix_mul([[1, "Hello"], [3, 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('<U21'), dtype('int64')) -> None
+
+
+For non-number in list in m_b:
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, "Hello"], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('int64'), dtype('<U21')) -> None
