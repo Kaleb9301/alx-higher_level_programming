@@ -71,7 +71,7 @@ Passing a list of tuples
 
 Passing an empty matrix
 
-    >>> matrix_mul([], ["Holberton"])
+    >>> matrix_mul([[]], ["Holberton"])
     Traceback (most recent call last):
               ...
     numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('float64'), dtype('<U9')) -> None
