@@ -33,6 +33,8 @@ Multiplying two matices 4
     >>> matrix_mul([[1, 5, 7]], [[3], [5], [8]])
     array([[84]])
 
+		
+
 Passing None as a matrix
 
     >>> matrix_mul(None, None)
@@ -136,3 +138,17 @@ Missing arguments
     Traceback (most recent call last):
 		    ...
     TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+For uneven m_a
+
+    >>> matrix_mul([[1,2], [3, 4, 5]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+
+For uneven m_b
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4, 5]])
+    Traceback (most recent call last):
+    ...
+    ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+ 
