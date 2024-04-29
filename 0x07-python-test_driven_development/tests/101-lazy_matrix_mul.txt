@@ -82,10 +82,10 @@ Passing an empty matrix
 
 Passing an empty matrix 2
 
-    >>> matrix_mul([[1, '1', 1], ['2', 2, '2']], [[3], [3]])
+    >>> matrix_mul([[1,2]], [[]])
     Traceback (most recent call last):
               ...
-    numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('<U21'), dtype('int64')) -> None
+    ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
 
 Passing a matrix with a list of strings
 
