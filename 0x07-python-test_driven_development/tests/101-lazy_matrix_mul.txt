@@ -107,8 +107,7 @@ Passing a matrix with list of string 2
     numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('int64'), dtype('<U21')) -> None
     
 
-Passing a matrix which its row have different size
-
+Passing a matrix which its row have different size after delete
     >>> matrix_mul([[2, 2, 2, 2], [4, 4, 4]], [[2, 2], [3, 3]])
     Traceback (most recent call last):
 	      ...
