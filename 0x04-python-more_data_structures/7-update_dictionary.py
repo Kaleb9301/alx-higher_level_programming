@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-"""This module replaces or adds key/value in dictionary"""
-
-
+def update_dictionary(a_dictionary, key, value):
+    a_dictionary[key] = value
+    return a_dictionary
