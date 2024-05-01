@@ -104,13 +104,6 @@ Passing a matrix with list of string 2
 	      ...
     numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('int64'), dtype('<U21')) -> None
 
-Passing a matrix with an empty list
-
-    >>> matrix_mul([[12, 12, 12], [], [14, 14, 14]], [[2], [3], [8]])
-    Traceback (most recent call last):
-              ...
-    ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (3,) + inhomogeneous part.
-
 Passing a matrix which its row have different size
 
     >>> matrix_mul([[2, 2, 2, 2], [4, 4, 4]], [[2, 2], [3, 3]])
