@@ -113,7 +113,7 @@ Passing a matrix with an empty list
 
 Passing a matrix which its row have different size
 
-    >>> matrix_mul([[2, 2, 2], [4, 4, 4]], [[2], [3, 3]])
+    >>> matrix_mul([[2, 2, 2, 2], [4, 4, 4]], [[2, 2], [3, 3]])
     Traceback (most recent call last):
 	      ...
     ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
