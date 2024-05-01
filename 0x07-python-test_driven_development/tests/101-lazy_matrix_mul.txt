@@ -66,10 +66,10 @@ Passing a string as a matrix
 
 Passing a list of tuples
 
-    >>> matrix_mul([(1, 5, 10)], [(1), (5)])
+    >>> matrix_mul(["Kaleb", "Kaleb"], [(1), (5)])
     Traceback (most recent call last):
 	      ...
-    ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2 is different from 3)
+    numpy.core._exceptions._UFuncNoLoopError: ufunc 'matmul' did not contain a loop with signature matching types (dtype('<U5'), dtype('int64')) -> None
 
 Passing an list of string
 
